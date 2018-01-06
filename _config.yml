@@ -1,0 +1,105 @@
+name: "CS 24 Winter 2018"
+github_url: https://github.com/ucsb-cs24-w18/ucsb-cs24-w18.github.io
+
+on_campus: http://proquest.safaribooksonline.com
+off_campus: http://proquest.safaribooksonline.com.proxy.library.ucsb.edu:2048
+
+start_week: 1
+start_date: 2018-01-14 00:00:00.00-8:00
+num_weeks: 9
+extra_exam_week: true
+
+instructor_url: https://ucsb-cs24.github.io/instructor
+
+cal_dates: >
+  [
+  {"label":"First day of classes", "date":"2018-01-16" },
+  {"label":"Last day to Add","date":"2018-01-22" },
+  {"label":"Last day to Add with code","date":"2018-02-05" },
+  {"label":"Drop Deadline (no W grade)","date":"2017-02-12" },
+  {"label":"Univ Holiday: Martin Luther King Day", "date":"2018-01-15" },
+  {"label":"Univ Holiday: Presidents Day", "date":"2018-02-19" },
+  {"label":"Last day of classes", "date":"2018-03-24" },
+  ]
+
+
+course: "CS24"
+legacy_wiki_name:
+legacy_wiki_url:
+qtr: "W18"
+quarter: "Winter 2018"
+
+kramdown:
+   parse_block_html: true
+
+
+exclude:
+   - vendor
+
+timezone: America/Los_Angeles
+
+collections:
+  hwk:
+    output: true
+    permalink: /hwk/:path/
+    last_before: false
+  lab:
+    output: true
+    permalink: /lab/:path/
+    last_before: false
+  pa:
+      output: true
+      permalink: /pa/:path/
+      last_before: false
+  exam:
+    output: true
+    permalink: /exam/:path/
+  info:
+    output: true
+    permalink: /info/:path/
+  lectures:
+    output: true
+    permalink: /lectures/:path/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: hwk
+    values:
+      layout: hwk
+  -
+    scope:
+      path: ""
+      type: lab
+    values:
+      layout: lab
+  -
+    scope:
+      path: ""
+      type: exam
+    values:
+      layout: exam_info
+  -
+    scope:
+      path: ""
+      type: info
+    values:
+      layout: info
+  -
+    scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture
+  -
+    scope:
+      path: "syllabus.md"
+      type: info
+    values:
+      layout: handout
