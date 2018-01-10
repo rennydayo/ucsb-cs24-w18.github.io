@@ -28,6 +28,6 @@ TA office hours are available on our [course Google Calendar](/info/schedule/)
 * Scott	DeMoney
 * Abhishek	Bhattacharya
 * Robert	Stosick
-* Carly	Larsson
+
 
 The tutors will help with the labs and other instructional activities as part of a pilot program.
