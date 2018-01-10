@@ -21,11 +21,14 @@ This lab must be completed INDIVIDUALLY. In the subsequent labs you are encourag
 ## Get to know your mentor and programming partner:
 
 * Take note of your course mentor and pair programming partner at  [mentor group](/info/mentor_groups/). Get to know your mentor:
+
 	* Read their profile at this link: https://ucsb-cs24-w18.github.io/info/staff/
 	* Meet them during the open lab hours on Thursday or Friday. The exact time and location can be found at [lab and office hours schedule](/info/schedule/)
 	* Contact your mentor via Piazza or email to confirm your meeting in Week1. During your meeting, set up a time when you can regularly meet for the remainder of the quarter. Your mentor will send you feedback on your work to your umail account. Make sure your line of communication with your mentor is working and talk about any preferences you may have. Your mentor will be your first point of contact for the quarter!
 
-## Step 1: Create an Engineering (CoE) Account, a github account and sign into our class github organization <a name="step1"></a>
+* Connect with your programming partner via email or in person and determine times when you can work together outside the prescribed lab hours. You will need to set aside 2 to 3 hours each week to work on assignments. Get your partner's contact: phone number or email.
+
+## Create an Engineering (CoE) Account, a github account and sign into our class github organization <a name="step1"></a>
 
 ### Create an CoE account if you don't have one already
 
@@ -73,7 +76,7 @@ will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect 
 
 You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
 
-## Step 3: Create cs24 and lab00 directories<a name="step3"></a>
+## Create cs24 and lab00 directories<a name="step3"></a>
 
 Now that your environment is set up, you will need to create a directory that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
 
@@ -126,7 +129,7 @@ Hello, world!
 I am ready for CS24!
 ```
 
-## Step 3: Submit your program for grading <a name="step7"></a>
+## Submit your program for grading <a name="step7"></a>
 
 Once you are satisfied that your program is correct, then it's time to submit it.
 
@@ -142,7 +145,7 @@ $ ~submit/submit -p 918 hello.cpp
 
 <hr>
 
-## Step 4: Explore github's web interface <a name="step9"></a>
+## Explore github's web interface <a name="step9"></a>
 
 Motivation for using github: When developing large programs, it is very useful to save working versions of your code that you can always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in later labs this would be your pair-programming partner) anytime, anywhere! It will also help the course staff view your progress as you work on the assignments.
 
