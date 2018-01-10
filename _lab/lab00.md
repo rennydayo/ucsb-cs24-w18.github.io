@@ -15,13 +15,6 @@ Your first lab for this week is an introduction to your mentor group and program
 * Getting to know your mentor and pair programming partner
 * Writing a simple C++ program
 * Learning about github's web interface
-* Getting setup
-
-Before leaving the lab you must get the following things checked off by your mentor:
-
-* Signed the electronic attendance sheet (your mentor should do this on your behalf)
-* Progress on your C++ program
-* Successful creation of a github account and signed up into our class github organization.
 
 This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
 
@@ -93,6 +86,7 @@ Change into that directory and create a lab00 directory
 ```
 $ mkdir lab00
 $ cd lab00   
+```
 
 Open an editor of your choice (either vim or emacs)
 
@@ -130,6 +124,7 @@ This assignment only needs you to write a program that prints out two lines on t
 Hello, world!
 I am ready for CS24!
 ```
+
 ## Step 3: Submit your program for grading <a name="step7"></a>
 
 Once you are satisfied that your program is correct, then it's time to submit it.
