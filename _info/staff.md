@@ -29,6 +29,5 @@ TA office hours are available on our [course Google Calendar](/info/schedule/)
 * Abhishek	Bhattacharya
 * Robert	Stosick
 * Carly	Larsson
-* Isaac 	McKay
 
 The tutors will help with the labs and other instructional activities as part of a pilot program.
