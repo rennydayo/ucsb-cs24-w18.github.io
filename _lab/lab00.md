@@ -6,25 +6,13 @@ desc: "Getting started with C++ functions and github's web interface"
 assigned: 2018-01-16 09:00:00.00-8
 due: 2018-01-22 23:59:00.00-8
 ---
-# Activities to complete prior to coming to the lab
 
-1. Check out your [mentor group](/info/mentor_groups/). In lab you and all your group members should meet with your mentor as soon as you reach the lab. Gather around your mentor for a short activity to get aquainted with your group
-
-2. Read the lab introduction (see next section)
-
-3. Complete step 1 of the lab (create a college of engineering account and a github account if you don't have one already, and sign up to be added to our github organization)
 
 # Introduction
 
-Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab.
+Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. The intended outcomes are:
 
-You will start with activities outside the lab (out in the lawns). The intended of those activities are:
-
-* Getting to know your peers and mentors (starting with their names)
-* Finding a potential programming partner who you will work with on subsequent labs (you don't have to make that decision until the end of the lab)
-
-You will then proceed to complete the rest of the lab. The intended outcomes are:
-
+* Getting to know your mentor and pair programming partner
 * Writing a simple C++ program
 * Learning about github's web interface
 * Getting setup
@@ -34,17 +22,20 @@ Before leaving the lab you must get the following things checked off by your men
 * Signed the electronic attendance sheet (your mentor should do this on your behalf)
 * Progress on your C++ program
 * Successful creation of a github account and signed up into our class github organization.
-* The tentative name of your programming partner for lab01 and pa01 (must be someone from your mentor group). You have time to change that until the due date for lab01
 
-This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
+This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
+
+## Getting to know your mentor and programming partner:
+
+Take note of your course mentor and pair programming partner at  [mentor group](/info/mentor_groups/). Get to know your mentor:
+	* Read their profile at this link: https://ucsb-cs24-w18.github.io/info/staff/
+	* Contact your mentor via Piazza or email to set up a time when you can regularly meet during the remainder of the quarter. You will receive regular updated from your mentor via your umail account. Make sure your line of communication is working and talk about any preferences!
 
 ## Step 1: Create an Engineering (CoE) Account, a github account and sign into our class github organization <a name="step1"></a>
 
 ### Create an CoE account if you don't have one already
 
 To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
-
-At this point, please go to [THIS LINK](https://ucsb.box.com/s/px12flf8g41m8g0gq4n6zqbbc9phkfrs) and view the important presentation from Engineering Computing Infrastructure on the College of Engineering accounts and computer labs.
 
 You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
 
@@ -58,7 +49,7 @@ Sign up for a free account on [Github](https://github.com/). Use your official u
 
 To join our github organization, follow these easy steps:
 
-1. click on this link:[ https://ucsb-cs24-s17-signup.herokuapp.com/]( https://ucsb-cs24-s17-signup.herokuapp.com/). You should see the following welcome message (with the organization stated as ucsb-cs24-sp17), click on the blue "sign in with Github" button:
+1. click on this link:[ https://ucsb-cs24-w18-signup.herokuapp.com/]( https://ucsb-cs24-w18-signup.herokuapp.com/). You should see the following welcome message (with the organization stated as ucsb-cs24-w18), click on the blue "sign in with Github" button:
 
 ![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
 
@@ -137,7 +128,7 @@ This assignment only needs you to write a program that prints out two lines on t
 
 ```
 Hello, world!
-CS24 Spring 2017.
+I am ready for CS24!
 ```
 ## Step 3: Submit your program for grading <a name="step7"></a>
 
@@ -145,17 +136,17 @@ Once you are satisfied that your program is correct, then it's time to submit it
 
 <strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
 
-Join the class CS24_s17 on submit.cs.
+Join the class CS24_w18 on submit.cs.
 
 Submit using the command:
 
 ```
-$ ~submit/submit -p 661 hello.cpp
+$ ~submit/submit -p 918 hello.cpp
 ```
 
 <hr>
 
-## Step 4: Explore github's web interface and declare a partner <a name="step9"></a>
+## Step 4: Explore github's web interface <a name="step9"></a>
 
 Motivation for using github: When developing large programs, it is very useful to save working versions of your code that you can always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in later labs this would be your pair-programming partner) anytime, anywhere! It will also help the course staff view your progress as you work on the assignments.
 
@@ -174,7 +165,7 @@ Your repo name should be lab00_your-github-username. For example if your github 
 
 5. Use github's web interface to edit the README file. In the README, add your and your partners name and perm number. If you don't know how to do this yet, wait until I demonstrate it in the next lecture. You may proceed to the next step
 
-6. Upload your hello.cpp file. To do this step you should be physically present on a lab machine or in CSIL where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: https://github.com/ucsb-cs24-sp17/lab00_jgaucho. Click on the "Upload files" button as shown below.
+6. Upload your hello.cpp file. To do this step you should be physically present on a lab machine or in CSIL where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: https://github.com/ucsb-cs24-w18/lab00_jgaucho. Click on the "Upload files" button as shown below.
 
 ![git-file-upload](/lab/lab00/git-repo-pic_ink-upload.jpg){:height="500px"}
 
