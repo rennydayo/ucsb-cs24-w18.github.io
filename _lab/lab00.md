@@ -22,7 +22,7 @@ This lab must be completed INDIVIDUALLY. In the subsequent labs you are encourag
 
 * Take note of your course mentor and pair programming partner at  [mentor group](/info/mentor_groups/). Get to know your mentor:
 
-	* Read their profile at this link: https://ucsb-cs24-w18.github.io/info/staff/
+	* Read your [mentor's profile] (/info/staff/)
 	* Meet them during the open lab hours on Thursday or Friday. The exact time and location can be found at [lab and office hours schedule](/info/schedule/)
 	* Contact your mentor via Piazza or email to confirm your meeting in Week1. During your meeting, set up a time when you can regularly meet for the remainder of the quarter. Your mentor will send you feedback on your work to your umail account. Make sure your line of communication with your mentor is working and talk about any preferences you may have. Your mentor will be your first point of contact for the quarter!
 
