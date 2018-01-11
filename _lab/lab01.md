@@ -177,7 +177,7 @@ If errors occur: read the error messages and try to figure out what needs changi
 Submit Lab01 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
 
 ```
-~submit/submit -p 693 rugfit2.cpp
+~submit/submit -p 921 rugfit2.cpp
 ```
 
 Be sure to wait for the results of the 4 simple tests.
