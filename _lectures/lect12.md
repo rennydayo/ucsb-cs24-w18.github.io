@@ -1,15 +1,24 @@
 ---
 num: "lect12"
-desc: "Making classes generic with templates (BST with templates)"
+desc: "Stacks (lab05) "
 ready: true
-pdfurl: /lectures/CS24_Lecture12.pdf
-annotatedpdfurl: /lectures/CS24_Lecture12_ann.pdf
+pdfurl: /lectures/CS24_Lecture9.pdf
+annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf
 annotatedready: true
-lecture_date: 2018-03-05
+lecture_date:  2012-03-05
 ---
 
-## Code from lecture
-* Live coding demo that converts the LinkedList class from lab04(originally named intlist) to a template class
-* Practice using template classes in code
-* Intro to the C++ STL
-* C++ Iterators (what are they? what's their purpose? how do we intend to use them?)
+# Topics
+* stack ADT - intro to C++ STL
+* queue
+* Compare Big O of all the data structures covered so far
+## Stacks
+* Stack operations
+* Using the C++ STL stack contaner class
+* Prefix, infix and postfix notations
+* Review of lab06 (applications of stacks)
+	* checking if paranthesis in an infix expression are balanced
+	* Evaluating fully paranthesized infix expressions
+	* Evaluating postfix expressions
+
+If time permits, continue discussion on iterators

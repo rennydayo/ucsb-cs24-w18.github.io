@@ -2,42 +2,41 @@
 layout: lab
 num: lab04
 ready: true
-desc: "Converting a class to use a dynamic array, binary search"
-assigned: 2018-02-12 09:00:00.00-8
-due: 2018-02-20 23:59:00.00-8
+desc: "Binary Search Tree"
+assigned: 2018-02-26 09:00:00.00-8
+due: 2018-03-05 23:59:00.00-8
 ---
+<div markdown="1">
 
-## Goals for this lab
+# Goals for this lab
 
 By the time you have completed this lab, you should be able to
 
-* Convert a class with a fixed array to use a dynamic array
-* Be more comfortable with memory management tasks
-* Write a copy constructor, destructor and assignment operator
-* Handle the requirements of PA3 that are very similar to this lab's tasks.
+* Know how to navigate a binary tree data structure
+* Implement recursive functions for binary trees
+* Implement binary search tree functions
 
 ## Step by Step Instructions
 
-## Step 1: Choose initial roles, create a directory and get files
+## Step 1: Create a lab08 git repo and get the starter code
 
-Get together with your lab partner, and decide who will be the first pilot. Switch roles after awhile - before either of you gets tired, bored or distracted. If your regular partner is more than 5 minutes late, ask the TA to pair you with someone else for this week.
+First get together with your lab partner. If your regular partner is more than 5 minutes late, let your mentor know.
 
-Log onto the pilot's account. If the pilot's account is not working, allow the navigator to log in instead. You will (both) work in this account for the rest of the lab.
+Select a pilot, log into the CSIL machines.
 
 ## Step 1a: Create a git repo, add your partner as collaborator
 
-* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-sp17 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab03_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
+* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-sp17 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab08_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
 
-* The pilot should add the navigator as a collaborator on github. To do this navigate to the git repo you just created. Choose the settings tab. Then click on the 'Collaborators and teams' option on the left. Scroll all the way down and add the navigator's github account. Then press on the 'Add collaborator' button. Now you and the navigator share the ownership of your git repo. You won't work with your new repo until the end of the lab.
+* The pilot should add the navigator as a collaborator on github, and the navigator should accept the request to join the repo. See instructions in previous labs
 
-## Step 1b: Set up directory for this lab
+## Step 1b: Clone your gitrepo and get the starter code
 
-
-* Clone your repo in your cs24 directory on CSIL. If your repo is called lab03_jgaucho_alily, type the following commands:
+* Clone your repo in your cs24 directory on CSIL. If your repo is called lab08_jgaucho_alily, type the following commands:
 
 ```
 cd ~/cs24
-git clone git@github.com:ucsb-cs24-sp17/lab03_jgaucho_alily.git
+git clone git@github.com:ucsb-cs24-sp17/lab08_jgaucho_alily.git
 ```
 
 Now navigate to your starter-code directory (cloned in a previous lab) and do a git pull to get the latest version of the code
@@ -45,125 +44,136 @@ Now navigate to your starter-code directory (cloned in a previous lab) and do a 
 ```
 cd ~/cs24/starter-code/
 git pull
-cd ~/cs24/lab03_jgauch_alily/
+cd ~/cs24/lab08_jgauch_alily/
 ```
+There are four required files to copy from the class account this week. Get them all at once:
 
-Now copy all of the files for this lab from the starter-code directory to your lab03 git repo directory:
 
+Verify you got all the files and try to compile them as follows:
 ```
-cp ~/cs24/starter-code/lab03/* ./
+-bash-4.3$ ls
+intbst.cpp  intbst.h  Makefile  testbst.cpp
+-bash-4.3$ make
+g++ -std=c++11 -o testbst testbst.cpp intbst.cpp
 ```
+A binary search tree class for integers, class IntBST is defined in intbst.h - please study this file for details of the class's features:
 
-## Step 2: Study the fixed-size array version of class Words
+The constructor, destructor, insert method and pre-order print method are already implemented in intbst.cpp. Notice the insert method will return false to indicate an attempt to insert a duplicate value; otherwise it inserts the value and returns true.
+In Step 3, you will implement the other two print methods, in-order and post-order. Then in Step 4 you will implement the sum, count and contains methods.
+The binary tree node structure is defined in the private area. The only instance variable is a node pointer, to point at the root node of the tree or at 0 if the tree is empty.
+Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods may choose to use them or not. See how the destructor uses clear, for example, and the insert method uses the overloaded version of insert, each by passing the root pointer to the corresponding utility function.
 
-Later in this lab you will convert this version into one that uses a dynamic array and does not have a fixed capacity. But first you should make sure that you understand the basic version.
+# Step 3: Implement in-order and post-order binary tree printing
 
-The class is defined in words1.h, it is implemented in words1.cpp, and it can be tested by the interactive test program named wordstest1.cpp.
-
-Use the following command to compile this version:
-
+You should be able to run testbst now (assuming you compiled it in Step 2):
 ```
-g++ -o wordstest1 wordstest1.cpp words1.cpp
-```
-
-Then run the test program. If you append more than 10 words, it will fail an assertion test and exit abnormally. The same will happen if you attempt to get or modify an element past the used portion of the array.
-After playing with the test program for (hopefully) a short while, study the code of the class itself, and study its implementation and use.
-
-As you can see in the private section of the class, the data are stored in a fixed size array of strings that can never hold more than 10 strings. The constructor does not have to create this array, but it does set the value of capacity to 10, and the initial value of used to 0.
-
-The append function will halt the program with an assertion if the used part of the array is already at capacity. The size and get_capacity functions work as expected. Although not important for this lab, you should notice the two different operator[] functions - the one not declared const is invoked when this operator is used on the left side of an assignment statement, and the other one is invoked in other situations.
-
-## Step 3: Learn what needs to be done, and why
-
-The version of the class that you must implement is in words2.h.
-
-This class redefines the basic default constructor to include a parameter to specify the container's initial capacity. As this parameter has a default value, it can be used with either zero or one argument. Your implementation will use the value of this argument to set the capacity instance variable. Also, you should use the new operator to allocate sufficient memory to store the number of strings specified by this parameter, and store a pointer to this memory in the data variable.
-
-The new version defines a copy constructor that must make a "deep copy" of the data from the source Words object. This copy constructor must also insure that it sets both used and capacity to equal the corresponding values in the source, and that it copies all of the data items from the source into the new data array.
-
-You must implement the destructor to deallocate the dynamic memory.
-
-The other major part you must implement is the new assignment operator. This function will be invoked whenever an existing Words object appears on the left side of an assignment, and whenever a Words object is a value parameter or is returned by value from a function. Like the copy constructor, it must make a deep copy of the data from the source object, but first it should: (a) verify the source is not the same as the object on which it is invoked (just return *this if this == &source); (b) if the capacity of the source differs from the capacity of the object on which it is invoked, then you must (b.1) allocate new memory to match the source capactiy, (b.2) use delete to deallocate the memory used by the existing data, and (b.3) point the data instance variable at this new memory; and finally (c) copy all of the strings from the source data into this new memory. The function must return the object *this.
-
-The append function will have no precondition anymore - so the assertion must be removed. Instead it must check whether or not the used portion of the array is at capacity though, and if it is, then this function must work to resize the array before appending the new item. We suggest you make the new capacity equal to twice the number of current items ("used * 2"). This process will require many of the same steps as the assignment operator to copy the existing data to new memory and deallocate the original data array.
-
-It should not be necessary to change the implementations of any of the other functions.
-
-Discuss the meaning of the necessary changes with your lab partner, to make sure you both understand (at least generally) what you are to do, and hopefully gain an appreciation for why these changes must be made. You might also want to refer to the textbook author's implementation of similar functions in his bag2.cxx file.
-
-## Step 4: Implement words2.h in a new file named words2.cpp
-
-Start by copying our implementation of the first version of class Words:
-
-```
-cp words1.cpp words2.cpp
-```
-
-Now it is time to edit the program with emacs or another editor of your choice. Lab00 had a link to some emacs help if you need it.
+-bash-4.3$ ./testbst
+Choice of tests:
+  0. all tests
+  1. just printInOrder
+  2. just printPostOrder
+  3. just sum
+  4. just count
+  5. just contains
+Enter choice:
+0
+BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
+  contains 128? N
+  contains 17? N
+  contains 512? N
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
 
 ```
-emacs words2.cpp
+Note that just the pre-order print is complete (and the sum, count and contains methods aren't working either).
+
+Use an editor (e.g., emacs) to make the following changes to intbst.cpp - do not change any of the other files.
+
+Fix the comment at the top to show your name(s) and the date.
+Scroll to the print functions (starting line 60). See how the public method just passes the root pointer to the private function in each case. Implement the private functions, printInOrder and printPostOrder.
+Save, and then test your print implementations: compile and execute testbst again, choosing either all tests or just one of your print functions to test.
+Here are the correct results (abbreviated to show just the print orders):
+
+BST:
+
+  pre-order: 64 8 4 32 16 128 512 256
+
+  in-order: 4 8 16 32 64 128 256 512
+
+  post-order: 4 16 32 8 256 512 128 64
+
+By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper. When you are done, compare your drawing to this Lab08
+http://www.cs.ucsb.edu/~mikec/cs24/assignments/lab09/lab09tree.png
+tree drawing. Review your work and redo it if your drawing does not match ours.
+
+# Step 4: Implement three more binary search tree functions
+
+First: switch roles between pilot and navigator if you did not already do that.
+
+You may do these tasks in any order. Check the results of each part as you complete it.
+
+Implement the helper function for sum() - notice the public method just returns the result of the helper function. We suggest you use recursion to do so. Think about these questions before starting to code: What's the base case? What should be returned in the base case? What should be returned in the general (recursive) case?
+Implement the helper function for count() - this is very similar to the sum() function.
+Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, then you must also implement and use the overloaded private contains function declared in intbst.h. You won't need the utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.
+Here are the results of all tests from our solution - you should verify that your results match:
+```
+BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order: 4 8 16 32 64 128 256 512
+  post-order: 4 16 32 8 256 512 128 64
+  sum: 1020
+  count: 8
+  contains 16? Y
+  contains 128? Y
+  contains 17? N
+  contains 512? Y
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
 ```
 
-Make the following edits, then save, and quit the editor.
+Be aware, however, that more rigorous testing will be done when your work is submitted (a different program is used for testing your functions, some with random data).
 
-* Change the header comment at the top to show the correct file name (words2.cpp), and that now it will be a dynamic array version. Also add your name(s) and the date you are doing this lab. It must include "words2.h" now, instead of "words1.h", and it must become part of namespace lab03_2 instead of lab03_1.
+# Step 5: Submit your revised intbst.cpp
 
-* The existing constructor must take one unsigned int argument for the initial capacity (remember not to specify a default argument value in the implementation). Set the capacity instance variable to the value of this argument, and use the new operator to allocate sufficient memory for that many strings. Point data at this new memory. Implement the copy constructor and the assignment operator as discussed above.
-
-* For the destructor, just copy the following and paste it into your implementation:
-
+Submit Lab08 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
 ```
-Words::~Words() {
-    delete [] data;
-}
+~submit/submit -p 747 intbst.cpp
 ```
-Revise the append function as discussed above too.
+If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code files, and be sure to properly form a group for this project in the submit.cs system.
 
-## Step 5: Compile and test
+50/50 is a perfect score.
 
-After making two very small changes, you can use wordstest1.cpp to test parts of your new version of the class. Using an editor, change the line "#include words1.h" to "#include words2.h", and change the line "using namespace lab03_1" to "using namespace lab03_2" - that's it. Now you can compile as above (substituting "words2.cpp" for "words1.cpp" in the command). Use this program to perform unit tests of append at least, and try to append more than 10 items to find out how that part is working. Verify that capacity increases too.
-
-When you are satisfied with your unit tests, you can perform slightly more complete tests with wordsexam.cpp, the same program we will use when you submit your implementation. Compile it as follows:
-
-```
-g++ -o wordsexam wordsexam.cpp words2.cpp
-```
-
-Then run it three times to execute all three tests:
-```
-./wordsexam 1
-./wordsexam 2
-./wordsexam 3
-```
-If all three tests say "PASS ALL" then proceed to Step 6.
-
-## Step 6: Submit words2.cpp
-
-Submit Lab03 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
-
-~submit/submit -p 712 words2.cpp
-
-Wait for the results of the 3 tests.
-If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.
-
-Now open a web-browser and upload all your files to your git repo (following the process from lab00).
-
-After completing the required lab work
-
-## Step 7: Lab check off
-
-* Meet with your mentor again to get checked off on the lab
-* Talk to your mentor about any challenges you faced while completing the lab
-* Talk to your mentor abut next steps
-
-Done early, but still some lab time left? If you see students who are struggling, and the TA is busy helping other struggling students, then please offer your help to them. Did you know that teaching someone else to do something is considered to be the surest way for you to learn that something yourself?
-
-
-## Evaluation and Grading
+# Evaluation and Grading
 
 Each student must accomplish the following to earn full credit [50 total points] for this lab:
 
-* [50 points] words2.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 50/50 to the submit.cs system.
+[50 points] intbst.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and scores 50/50 on the submit.cs system tests.
+[-0 to -50 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
 
-* [-0 to -50 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
+# Optional Extra Challenge
+
+Work with copies of intbst.h, intbst.cpp and testbst.cpp in attempting these challenges. Maybe just create a subdirectory named challenge inside your lab09 directory, and then copy the current versions of these files into there.
+
+If you used recursion to implement the contains method, then try it again using iteration instead. Or if you solved this problem iteratively in the first place, then solve it recursively now. You should know how to do it both ways.
+More challenging: uncomment the remove method (and its helper functions if necessary) in intbst.h, implement it in intbst.cpp, and add tests for it in testbst.cpp.
+We suggest you solve the problem recursively using this remove algorithm, but you may try to solve it iteratively if you prefer.
+Test it thoroughly by editing testbst.cpp, and consider inserting more nodes if necessary. Be sure to test all situations (delete leaves, delete nodes with just a left child or just a right child, and delete nodes with two children).
+Generalize class IntBST to work for other data types. Think about how you might do that, then devise a plan and try to make all the necessary changes to the code. Test it with strings, for example.
+Prepared by Michael Costanzo.
+</div>

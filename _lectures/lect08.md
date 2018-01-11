@@ -1,17 +1,15 @@
 ---
 num: "lect08"
-desc: "Algorithm running time analysis "
+desc: "Binary Trees (expression trees), recursion, tree traversals"
 ready: true
-pdfurl: /lectures/CS24_Lecture8.pdf
-annotatedpdfurl: /lectures/CS24_Lecture8_ann.pdf
+pdfurl: /lectures/CS24_Lecture10.pdf
+annotatedpdfurl: /lectures/CS24_Lecture10_ann.pdf
 annotatedready: true
 lecture_date: 2018-02-12
 ---
 
 # Topics
+* Implement expression trees
+* Pre, post and in order traversal
 
-* Intro: count steps by detailed computer model of times to fetch, store, assign …
-* O notation - Big O details, but also briefly Little O, Big Omega, Big Theta
-* Formal Big O - formula and graphical presentation
-* Complexity classes - constant, logarithmic, exponential, linear, quadratic, cubic
-* Example algorithms
+## Code from lecture

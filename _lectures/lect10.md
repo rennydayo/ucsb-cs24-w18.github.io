@@ -1,15 +1,12 @@
 ---
 num: "lect10"
-desc: "Binary Trees (expression trees), recursion, tree traversals"
+desc: "C++ templates - generic BSTs "
 ready: true
-pdfurl: /lectures/CS24_Lecture10.pdf
-annotatedpdfurl: /lectures/CS24_Lecture10_ann.pdf
+pdfurl: /lectures/CS24_Lecture8.pdf
+annotatedpdfurl: /lectures/CS24_Lecture8_ann.pdf
 annotatedready: true
-lecture_date:  2018-02-26
+lecture_date:  2018-02-21
+
 ---
 
 # Topics
-* Implement expression trees
-* Pre, post and in order traversal
-
-## Code from lecture

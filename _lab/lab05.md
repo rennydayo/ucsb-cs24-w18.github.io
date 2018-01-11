@@ -3,8 +3,8 @@ layout: lab
 num: lab05
 ready: true
 desc: "Evaluating expressions with stacks"
-assigned: 2018-02-26 09:00:00.00-8
-due: 2018-03-05 23:59:00.00-8
+assigned: 2018-03-05 09:00:00.00-8
+due: 2018-03-12 23:59:00.00-8
 ---
 http://www.cs.ucsb.edu/~mikec/cs24/assignments/lab06/index.html
 # Goals for this lab
