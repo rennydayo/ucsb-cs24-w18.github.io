@@ -258,7 +258,7 @@ Don't leave early though ... begin the after-lab work below.
 * To submit your code type:
 
 ```
-~submit/submit -p 701 buggy1.cpp
+~submit/submit -p 929 buggy1.cpp
 ```
 
 ## Evaluation and Grading
