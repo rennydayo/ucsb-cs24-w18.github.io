@@ -206,7 +206,7 @@ Don't leave early though ... see challenge problems below.
 
 Submit Lab06 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
 
-~submit/submit -p 735 evalfull.cpp usestack.cpp
+~submit/submit -p 932 evalfull.cpp usestack.cpp
 
 ## Evaluation and Grading
 
