@@ -232,7 +232,7 @@ Step 5: Submit intlist.cpp
 Submit your code at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
 
 ```
-~submit/submit -p 723 intlist.cpp
+~submit/submit -p 930 intlist.cpp
 ```
 
 If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.
