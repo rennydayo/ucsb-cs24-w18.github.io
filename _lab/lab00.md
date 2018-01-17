@@ -3,7 +3,7 @@ layout: lab
 num: lab00
 ready: true
 desc: "Getting started with C++ functions and github's web interface"
-assigned: 2018-01-16 09:00:00.00-8
+assigned: 2018-01-18 09:00:00.00-8
 due: 2018-01-22 23:59:00.00-8
 ---
 
@@ -106,7 +106,7 @@ Useful information related to <b>vim</b> for UNIX-based OS
 	* To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:
 
 	```
-	cp /cs/faculty/dimirza/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
+	cp /cs/faculty/dimirza/all-cs16/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
 	```
 
 	* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
@@ -151,7 +151,7 @@ Motivation for using github: When developing large programs, it is very useful t
 
 * You will now create a git repo. The concept of a repo was explained in the article that you just read. New projects always start with this step. Since Github promotes "open source" projects, repos created under your default github account are *public*. This means that they are visible to everyone on the internet. However, for this class your assignments have to be "closed source", and not open to your classmates and others on the internet. This requires that you create *private* repos. These are repos that are only visible to you, your pair-partner and the instructional staff. You can only create private repos within our class organization on github: ucsb-cs24-sp17. So, the next step is to join our class organization.
 
-* Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs24-sp17](https://github.com/orgs/ucsb-cs24-sp17/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs24.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
+* Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs24-w18](https://github.com/orgs/ucsb-cs24-w18/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs24.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
 
 ![new-repo](/lab/lab00/enter-org/pic5.png){:height="500px"}
 
