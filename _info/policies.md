@@ -13,9 +13,8 @@ ready: true
 * Homeworks/Quizzes: 8%
 * Lab assignments: 20%
 * Projects: 20%
-* Midterm Exam: 15%
-* Lab Exam: 15%
-* Final Examination : 20%
+* Midterm Exam: 20%
+* Final Examination : 30%
 
 <p>Quizzes may occur at anytime, announced or unannounced. Missed quizzes may not be made up.<br />
 Thus <strong>attendance is required</strong>, and <strong>reading the assigned readings is required.</strong></p>
