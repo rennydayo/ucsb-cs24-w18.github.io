@@ -5,7 +5,7 @@ desc: "Course overview, intro to github and C++ classes (lab01)"
 ready: true
 pdfurl: /lectures/CS24_Lecture1.pdf
 annotatedpdfurl: /lectures/CS24_Lecture1_ann.pdf
-annotatedready: true
+annotatedready: false
 ---
 
 
