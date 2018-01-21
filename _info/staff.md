@@ -15,7 +15,7 @@ ready: true
 
 |  Mentor | Bio and welcome message|
 |---------|------------------------|
-|![Nidhi][mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg] <br> Nidhi Hiremath||
+|![Nidhi][/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg] <br> Nidhi Hiremath||
 |Jack Alexander ||
 
 
