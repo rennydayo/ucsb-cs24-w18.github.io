@@ -14,26 +14,18 @@ ready: true
 ## CS 24 Mentor profiles
 
 <table style="width:100%">
-  <tr>
-    <th>Mentor</th>
-    <th>Bio and welcome message!</th>
-  </tr>
+
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg" alt="Nidhi Hiremath" style="height:200px;"> <br>
-    <b> Nidhi Hiremath (TA)   </b>
-    </td>
-    <td>
-    <i> "Hi everyone! I'm Nidhi, a first year Masters Student in the CS department. This will be the first time I'm TAing CS24 and am excited to help you better understand computer programming with C++. The topics we’re planning to cover in CS24, like Object Oriented Programming and some data structures will help you begin building exciting projects. I built most of my first projects in C++ and would be happy to help you do the same. I'm into interdisciplinary research, so if that's something you might be interested in, I'd be happy to share my experiences. In my spare time, I enjoy destroying my sleep cycle with TV shows and weight-lifting. I'm always open to discussing anything you might need help with, like choosing classes, getting involved in research labs or just about anything, feel free to reach out to me on Piazza" </i>
+    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg"  height="200px"  alt="Nidhi Hiremath" style="float: left; margin: 10px 10px 10px 10px;">
+    <b>Nidhi Hiremath (TA)</b>
+    <i> "Hi everyone! I'm Nidhi, a first year Masters Student in the CS department. I am excited to help you better understand computer programming with C++ and build exciting projects. I built most of my first projects in C++ and would be happy to help you do the same. I'm into interdisciplinary research, so if that's something you might be interested in, I'd be happy to share my experiences. In my spare time, I enjoy destroying my sleep cycle with TV shows and weight-lifting. I'm always open to discussing anything you might need help with, like choosing classes, getting involved in research labs or just about anything, feel free to reach out to me on Piazza" </i>
     </td>
 
-  </tr>
-  <tr>
+
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-John-Alexander.jpg" alt="Jack Alexander" style="height:200px;"> <br>
-  <b> Jack Alexander (TA)    </b>
-  </td>
-  <td>
+  <img src="/info/mentorPhotos/CS24-W18-John-Alexander.jpg" alt="Jack Alexander" alt="Image" height="200px" style="float: top; margin: 5px 10px 10px 10px;">
+  <b> Jack Alexander (TA) </b>
   <i> "Hey, my name is Jack, and I’ve been looking forward to TAing this class for the whole year! I’m a master’s student in the Computer Science BS/MS program, where you get a Bachelor’s and a Master’s degree in five years (highly recommended). In the past, I’ve mentored in CS56 and CS190I, and last quarter I TAed CS184. As I said, I’ve wanted to TA an introductory CS class for quite a while, and I can’t wait to help guide you through the more advanced elements of C++ as well as your first complex data structures. Linked lists and binary search trees had something of a magical quality for me when I first learned them three years ago, and I hope you will have a similarly enthralling experience in this course" </i>
   </td>
 
@@ -41,37 +33,69 @@ ready: true
   </tr>
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Shreyas-CR.jpg" alt="Shreyas" style="height:200px;"> <br>
+    <img src="/info/mentorPhotos/CS24-W18-Shreyas-CR.jpg" alt="Shreyas" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
     <b> Shreyas CR (Tutor)   </b>
-    </td>
-    <td>
     <i> " I'm super glad I can be one of your tutors for CS24 this quarter. In CS24 you'll start learning how to apply all the problem solving skills you've learned in the past, and get a quick intro to more complex data structures. It may be a bit scary at first (we've all been there!), but overtime you'll learn a lot and come to love CS even more! This quarter, you'll see me running around at SB Hacks IV and SASE West Regional Conference, so don't be afraid to say hi!! If you want to learn more about getting involved in UCSB club organizations and landing super cool internships for the summer, feel free to talk to me during class or when you see me in the library (I don’t mind getting distracted haha). I've gone through it all, and I don't mind helping out where I can~ :) Aside from UCSB and CS, I love to explore/travel, hike, and spend as much time outside as I can (can't beat the Cali sun). " </i>
     </td>
 
+
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Sayali-Kakade.jpg" alt="Sayali" height="200px" style="float: top; margin: 10px 10px 10px 10px;">
+  <b> Sayali Kakade (Tutor)    </b>
+  <i> "Hi everyone, I’m so excited to be one of your tutors for this upcoming quarter! I know this class can be daunting at times, and I’d love to help you with any concept that you might be unclear about, figure out how to approach the PAs, or even give you career or college advice (classes to take, internship advice, things unrelated to academics, etc). <br> This class will set the foundation for your classes in the future so it’s very important to understand the material, and even if you need to ask the same question multiple times to really drive a point home, I never want you to feel afraid to ask me anything! If you see me around campus, feel free to say hi or reach out to me on Piazza. Hope you have a great quarter! :)" </i>
+  </td>
+  </tr>
+
+
+  <tr>
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-ClaudiaZeng.jpeg" alt="Claudia" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Claudia Zheng (Tutor) </b>
+  <i> "Hi everyone! I am Claudia." </i>
+  </td>
+
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Bryanna-Phan.jpg" alt="Bryanna" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Bryanna Phan (Tutor)    </b>
+  <i> "Hi everyone, my name is Bryanna and I’m very excited to be a tutor this quarter! You’ll probably see me at Coders SB meetings, so ask me about our events if you’re looking to get more involved on campus whether it be through this club, SB Hacks or the other wide variety of options. This quarter I’d definitely like to focus on helping students to solidify their problem-solving skills and to not be daunted by the programming assignments (trust me, I know how that can feel). Outside of class, I really love traveling, dogs, ping pong/badminton (even tho I’m not great), and tea :-) Feel free to reach out with any questions you may have on Piazza." </i>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Bryan-Wu.jpg" alt="Bryan-Wu" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Bryan Wu (Tutor)    </b>
+  <i> "Welcome to CS 24 everyone! I’m a second-year Computer Science (CS) major. I tutored for CS 8 Fall 2017, and I’m excited to return for another opportunity to directly support fellow coders! Additionally, I would be glad to be of assistance if any of you have questions about switching into the CS major in the College of Engineering. I came into UCSB as an Economics major and made the switch to CS at the end of the Spring quarter of my first year. The process of switching into CS was a challenging struggle that grew on me initially as a dreadful archenemy, but ended up as a very close friend of mine who polished my study and life skills. On a side note, I enjoy hanging around and sleeping in cafes, traveling, gaming, playing the piano, and taking pictures. Contact me on Piazza if you have any questions about CS, or just want to chat (no Game of Thrones spoilers)! " </i>
+  </td>
+
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Areg-Nersisyan.jpeg" alt=" Areg	Nersisyan" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b>  Areg	Nersisyan(Tutor)    </b>
+  <i> "Hi everyone, I’m one of your mentors for CS 24. I’m a junior here at UCSB studying CS. Prior to mentoring for a class, I’ve done private tutoring for 4 years and realized I enjoy helping others learn. I’ll be glad to discuss any questions you have and help you find further resources if the need be. My goal is to help you fill in any knowledge gaps, since I think by having a strong foundation in the topics makes the rest easier. Outside of CS24 questions I’ll be glad to help anyone with planning out class schedules, telling my experiences in classes I’ve had. Those interested about summertime internships, I’ll also try to give my best advice on prep and approaches to answering questions. Besides CS, I like spending my personal time swimming, going to the gym, playing video games and sleeping, a lot of sleeping. So that said, if you like to talk to me, let me know in person or via Piazza. I will typically get back to you by end of the day, but if there’s anything urgent or you don’t want to wait, let me know beforehand in person and I’ll make sure to stay more alert about your email.
+" </i>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Scott-DeMoney.jpg" alt="Scott-DeMoney" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Scott DeMoney (Tutor)    </b>
+  <i> "Hi everyone, my name is Scott DeMoney (but you can call me Scotty) and I’m excited to be mentoring for the first time for CS24! I’m a third year CS student, and also a 2017 and 2018 Amazon Software Development Engineer Intern. My hobbies outside of CS include hiking, photography, and cooking. Feel free to come to me with any questions about CS, interviewing, working in the industry, or anything else on your mind. You can reach me anytime at scottdemoney@umail.ucsb.edu " </i>
+  </td>
+
+  <td>
+  <img src="/info/mentorPhotos/CS24-W18-Abhishek-Bhattacharya.jpeg" alt=" Abhishek	Bhattacharya" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b>  Abhishek	Bhattacharya (Tutor)    </b>
+  <i> "" </i>
+  </td>
   </tr>
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Sayali-Kakade.jpg" alt="Sayali" style="height:200px;"> <br>
-  <b> Sayali Kakade (Tutor)    </b>
+  <img src="/info/mentorPhotos/CS24-W18-Robert-Stosick.jpg" alt=" Robert	Stosick" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b>  Robert	Stosick (Tutor)    </b>
+  <i> "" </i>
   </td>
-  <td>
-  <i> "Hi everyone, I’m so excited to be one of your tutors for this upcoming quarter! I know this class can be daunting at times, and I’d love to help you with any concept that you might be unclear about, figure out how to approach the PAs, or even give you career or college advice (classes to take, internship advice, things unrelated to academics, etc). This class will set the foundation for your classes in the future so it’s very important to understand the material, and even if you need to ask the same question multiple times to really drive a point home, I never want you to feel afraid to ask me anything! If you see me around campus, feel free to say hi or reach out to me on Piazza. Hope you have a great quarter! :)" </i>
-  </td>
-
-
   </tr>
 
+
 </table>
-
-
-
-* Claudia	Zeng
-* Bryanna	Phan
-* Bryan	Wu
-* Areg	Nersisyan
-* Scott	DeMoney
-* Abhishek	Bhattacharya
-* Robert	Stosick
-
-
-The tutors will help with the labs and other instructional activities as part of a pilot program.
