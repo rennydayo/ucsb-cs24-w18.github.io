@@ -17,7 +17,7 @@ ready: true
 
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg"  height="200px"  alt="Nidhi Hiremath" style="float: left; margin: 10px 10px 10px 10px;">
+    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg"  height="200px"  alt="Nidhi Hiremath" style="float: top; margin: 10px 10px 10px 10px;">
     <b>Nidhi Hiremath (TA)</b>
     <i> "Hi everyone! I'm Nidhi, a first year Masters Student in the CS department. I am excited to help you better understand computer programming with C++ and build exciting projects. I built most of my first projects in C++ and would be happy to help you do the same. I'm into interdisciplinary research, so if that's something you might be interested in, I'd be happy to share my experiences. In my spare time, I enjoy destroying my sleep cycle with TV shows and weight-lifting. I'm always open to discussing anything you might need help with, like choosing classes, getting involved in research labs or just about anything, feel free to reach out to me on Piazza" </i>
     </td>
@@ -33,7 +33,7 @@ ready: true
   </tr>
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Shreyas-CR.jpg" alt="Shreyas" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+    <img src="/info/mentorPhotos/CS24-W18-Shreyas-CR.jpg" alt="Shreyas" height="200px" style="float: top; margin: 10px 10px 10px 10px;">
     <b> Shreyas CR (Tutor)   </b>
     <i> " I'm super glad I can be one of your tutors for CS24 this quarter. In CS24 you'll start learning how to apply all the problem solving skills you've learned in the past, and get a quick intro to more complex data structures. It may be a bit scary at first (we've all been there!), but overtime you'll learn a lot and come to love CS even more! This quarter, you'll see me running around at SB Hacks IV and SASE West Regional Conference, so don't be afraid to say hi!! If you want to learn more about getting involved in UCSB club organizations and landing super cool internships for the summer, feel free to talk to me during class or when you see me in the library (I don’t mind getting distracted haha). I've gone through it all, and I don't mind helping out where I can~ :) Aside from UCSB and CS, I love to explore/travel, hike, and spend as much time outside as I can (can't beat the Cali sun). " </i>
     </td>
@@ -63,7 +63,7 @@ ready: true
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Bryan-Wu.jpg" alt="Bryan-Wu" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-W18-Bryan-Wu.jpg" alt="Bryan-Wu" height="200px" style="float: top; margin: 10px 10px 10px 10px;">
   <b> Bryan Wu (Tutor)    </b>
   <i> "Welcome to CS 24 everyone! I’m a second-year Computer Science (CS) major. I tutored for CS 8 Fall 2017, and I’m excited to return for another opportunity to directly support fellow coders! Additionally, I would be glad to be of assistance if any of you have questions about switching into the CS major in the College of Engineering. I came into UCSB as an Economics major and made the switch to CS at the end of the Spring quarter of my first year. The process of switching into CS was a challenging struggle that grew on me initially as a dreadful archenemy, but ended up as a very close friend of mine who polished my study and life skills. On a side note, I enjoy hanging around and sleeping in cafes, traveling, gaming, playing the piano, and taking pictures. Contact me on Piazza if you have any questions about CS, or just want to chat (no Game of Thrones spoilers)! " </i>
   </td>
@@ -93,7 +93,14 @@ ready: true
   <td>
   <img src="/info/mentorPhotos/CS24-W18-Robert-Stosick.jpg" alt=" Robert	Stosick" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Robert	Stosick (Tutor)    </b>
-  <i> "" </i>
+  <i> "Hi there! My name is Robert, my pronouns are he/him/his. I am excited to be one of your mentors for CS 24. I am a senior here, studying Computer Engineering. This is my first time mentoring, but I have been very grateful for all of the TAs who have helped me throughout my time at UCSB, and I am excited to give back by having the opportunity to help you grow and develop your coding skills.
+
+  In CS 24 you will have the opportunity to continue honing your programming skills, develop new ones, and really begin to get into Computer Science in greater depth. It is of course important to learn the course material, but I believe it is equally important to develop good coding habits early on in your CS education, because long after the specific details of what you learned in CS 24 are fuzzy, you will keep using the skills you learned.
+
+  For non-CS majors, taking CS 24 will teach you coding skills that are valuable and give you a competitive advantage over peers who do not have these skills, and will give you a solid foundation in Computer Science (the same foundation that CS and CE majors receive) should you wish to continue learning to code in the future. With the rise of Big Data and the Internet of Things, knowing how to code is more valuable than ever in many fields.
+
+  I imagine that the course may be tough, especially so for students who may not have had much or any programming experience prior to CS 8 and CS 16, but I will do my best to guide you through the challenges. I was once in that boat, and I am confident that you will succeed too. I will do my best to help make your journey as smooth as possible.
+  I can also answer lots of questions about other CS classes here at UCSB. Please feel free to ask me questions, even if it seems like a silly question. I look forward to seeing you in lab." </i>
   </td>
   </tr>
 
