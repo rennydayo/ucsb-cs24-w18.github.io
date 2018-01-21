@@ -49,7 +49,7 @@ ready: true
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Bryanna-Phan.jpg" alt="Bryanna" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-W18-Bryanna-Phan.JPG" alt="Bryanna" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b> Bryanna Phan (Tutor)    </b>
   <i> "Hi everyone, my name is Bryanna and I’m very excited to be a tutor this quarter! You’ll probably see me at Coders SB meetings, so ask me about our events if you’re looking to get more involved on campus whether it be through this club, SB Hacks or the other wide variety of options. This quarter I’d definitely like to focus on helping students to solidify their problem-solving skills and to not be daunted by the programming assignments (trust me, I know how that can feel). Outside of class, I really love traveling, dogs, ping pong/badminton (even tho I’m not great), and tea :-) Feel free to reach out with any questions you may have on Piazza." </i>
   </td>
