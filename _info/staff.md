@@ -11,9 +11,13 @@ ready: true
 * Office hours time and location are available on [course Google Calendar](/info/schedule/)
 * Homepage: [https://www.cs.ucsb.edu/~dimirza/](https://www.cs.ucsb.edu/~dimirza/)
 
-## Teaching Assistants
-* Nidhi Hiremath
-* Jack Alexander
+## CS 24 Mentor profiles
+
+|  Mentor | Bio and welcome message|
+|---------|------------------------|
+|![Nidhi][] <br> Nidhi Hiremath||
+|Jack Alexander ||
+
 
 
 TA office hours are available on our [course Google Calendar](/info/schedule/)
