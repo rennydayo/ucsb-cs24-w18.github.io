@@ -50,14 +50,14 @@ We assume you already know everything that was covered in Lab00, and we will not
 * Clone the starter code repo from our class organization to the pilot's local account by typing the following commands
 
 ```
-	git clone git@github.com:ucsb-cs24-sp17/starter-code.git
+	git clone git@github.com:ucsb-cs24-w18/cs24-w18-lab-starter-code.git
 ```
 Note that this repo contains the starter code for all labs and pas (although only the code for lab01 is up to date). So, you don't have to repeat the above step in subsequent labs.
 
 
 ## Step 1b: Create a new repo, add your partner as collaborator and clone the git repo that contains the starter code
 
-* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-sp17 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab00_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
+* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-w18 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab00_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
 
 * The pilot should add the navigator as a collaborator on github. To do this navigate to the git repo you just created. Choose the settings tab. Then click on the 'Collaborators and teams' option on the left. Scroll all the way down and add the navigator's github account. Then press on the 'Add collaborator' button. Now you and the navigator share the ownership of your git repo. You won't work with your new repo until the end of the lab.
 
@@ -66,7 +66,7 @@ You just have to do a 'git pull' in the starter-code to get the latest code.
 * Now navigate to the lab01 directory within the starter-code repo, and do a git pull to get the latest version of the starter code for lab01:
 
 ```
-	cd starter-code
+	cd cs24-w18-lab-starter-code
 	git pull
 ```
 
@@ -88,7 +88,7 @@ cd ~/cs24/lab01
 * Copy the starter code by typing the following command:
 
 ```
-cp ../starter-code/lab01/* ./
+cp ../cs24-w18-lab-starter-code/lab01/* ./
 ```
 You should see two files in your current directory: rugfit1.cpp and rugfit2.cpp
 
