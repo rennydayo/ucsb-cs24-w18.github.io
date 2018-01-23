@@ -95,8 +95,12 @@ ready: true
   <tr>
   <td>
   <img src="/info/mentorPhotos/CS24-W18-ClaudiaZeng.jpeg" alt="Claudia" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b> Claudia Zheng (Tutor) </b>
-  <i> "Hi everyone! I am Claudia." </i>
+  <b> Claudia Zeng (Tutor) </b>
+  <i> "Hi, I’m Claudia (Yuqing) Zeng (she/her/hers) and I’m a 2nd year computer science major student. I was the tutor for last quarter CS8 and I’m really excited to be your CS24 mentor for this quarter. I will be the first person you contact whenever you have problems. It could be the lab assignments, homework, or anything you want to know about computer science major, or me. I will also offer feedback on your code.
+
+More personally, I was the software engineer in InitialView. Beside this course, I’m also working for Coastal Oceanography & Autonomous Systems Lab on campus. COAST built a cataraft docked with the Autonomous Underwater Vehicles to protect it. By using this cataraft, we collect information from ocean for research. I work on the cataraft interface with the REMUS 600, including wifi, bluetooth and sonar. I also do Android app design, machine learning through python, VR game design using Unity, robotics using C++, and some other stuff. Other than that, since I changed my major from math to computer science, I can share my experience on that. If you have any questions about changing majors, feel free to reach me. My open lab hours will be on Thursday from 12:30-1:30pm, and on Friday from 3-5pm. Or you can make an appointment by sending me a Piazza post.
+
+Hope we all have a wonderful quarter!" </i>
   </td>
   </tr>
   <tr>
