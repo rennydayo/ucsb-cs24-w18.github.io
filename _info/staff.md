@@ -101,7 +101,7 @@ ready: true
   </tr>
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Abhishek-Bhattacharya.jpg" alt=" Abhishek	Bhattacharya" height="200px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-W18-Abhishek-Bhattacharya.jpg" alt=" Abhishek	Bhattacharya" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Abhishek	Bhattacharya (Tutor)    </b>
   <i> "Hi! My name is  Abhishek, I am a 4th year CCS Computing and Biology double major. I am super excited to be one of the mentors for CS24. Here’s a little background about me:  In the last few years I have been lucky enough to have worked with leading scientists at Stanford, UCSF and UCSB to uncover the potential of big data in computational biology. My interests lie in deep learning precision interpretation of medical imaging for the clinics. I have been involved with a number of ongoing projects in skin and breast cancer quantitative image analysis. If any of you also like these topics or just want to chat, don’t hesitate to contact me on Piazza :) " </i>
   </td>
