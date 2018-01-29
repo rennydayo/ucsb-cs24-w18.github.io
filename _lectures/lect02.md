@@ -4,7 +4,7 @@ desc: "C++ classes - converting a procedural implementation to a OOP style progr
 ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
-annotatedready: true
+annotatedready: false
 lecture_date: 2018-01-22
 ---
 
