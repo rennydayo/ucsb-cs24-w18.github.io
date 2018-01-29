@@ -265,8 +265,11 @@ Reading symbols from ./buggy...done.
 Type "r" for "run", followed by the command line arguments CS16 A CS24 A+ 
 
 (gdb)r CS16 A CS24 A+ CS32 A
-Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+
-This way the program will run until line 24. Normally, you might have put a cout statement right before this line to examine the values of the arrays and any other local variables. With gdb we can do this at the gdb command line without having to edit and recompile our program
+Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
+This way the program will run until line 24. Normally, you might have put 
+a cout statement right before this line to examine the values of the arrays 
+and any other local variables. With gdb we can do this at the gdb command 
+line without having to edit and recompile our program
 
 Let's print the element 0 of courseNames using the "p" (print) statement
 
@@ -278,8 +281,10 @@ That seems right. Now let's try to print the first five elements of courseNames
 (gdb) p courseNames[0]@5
 $1 = {"CS16", "", "CS24", "", "CS32"}
 
-This is definitely weird, "CS24" is at index 2, while it should have been at index 1, CS32 is at the wrong spot as well. 
-Go ahead and print the values of all the local variables in your code using info locals
+This is definitely weird, "CS24" is at index 2, while it should have been
+at index 1, CS32 is at the wrong spot as well. 
+Go ahead and print the values of all the local variables in your code using 
+info locals
 
 (gdb) info locals
 courseNames = {"CS16", "", "CS24", "", "CS32"}
@@ -288,7 +293,15 @@ courseLetterGrades = {"A", "", "A+", "", "A"}
 numCourses = 3
 result = 2.0750045670802343e-317
 
-You will probably see a different set of values for courseGrades and result because these are uninitialzied. But the other variables should have the same values as shown above. We can immediately spot that something went wrong prior to line 24 by looking at the content of courseNames and courseLetterGrades. The program should have resulted in courseNames being {"CS16", "CS24", "CS32", "", ""} and courseLetterGrades being {"A", "A+", "A",  "", ""}. Notice how much easier it is to examine the values of your variables at run time with gdb, without having to put additional print statements.
+You will probably see a different set of values for courseGrades and result 
+because these are uninitialzied. But the other variables should have the
+same values as shown above. We can immediately spot that something went 
+wrong prior to line 24 by looking at the content of courseNames and
+courseLetterGrades. The program should have resulted in courseNames being
+{"CS16", "CS24", "CS32", "", ""} and courseLetterGrades being
+{"A", "A+", "A",  "", ""}. Notice how much easier it is to examine the values
+of your variables at run time with gdb, without having to put additional 
+print statements.
 
 Let's continue for now. Type "l" for list to see the code you are about to execute.
 
@@ -304,50 +317,61 @@ Let's continue for now. Type "l" for list to see the code you are about to execu
 27	  cout.setf(ios::showpoint);
 28	  cout.precision(3);
 
-We had set the breakpoint at line 24 which is a function call. You can step into the function assignCourseGrade using the "s" (step) command
+We had set the breakpoint at line 24 which is a function call. 
+You can step into the function assignCourseGrade using the "s" (step) command
 (gdb) s
 assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60, 
     courseGrades=0x7fffffffdf00) at buggyGPA.cpp:38
 38	    for(int i =0 ; i < numCourses; i++){
 
-gdb is showing you the values of all the parameters passed to the assignCourseGrade function!
-Print the first 5 elements of courseGrades
+gdb is showing you the values of all the parameters passed to the 
+assignCourseGrade function! Print the first 5 elements of courseGrades
 
 (gdb) p courseGrades[0]@5
 $2 = {0, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
 
-This is the array the function will be modifying. Use "n" for next to just execute the next line
+This is the array the function will be modifying. 
+Use "n" for next to just execute the next line
 
 (gdb) n
 39	      if(courseLetterGrades[i]=="A" || courseLetterGrades[i]=="A+"){
 
-You can run the same gdb command as before by pressing enter. In this case if you press enter you gdb will execute the next command.
+You can run the same gdb command as before by pressing enter. 
+In this case if you press enter you gdb will execute the next command.
 
 (gdb) 
 40	        courseGrades[i] = 4.0;
 
-So, the next line gdb is going to execute is line 40. Enter once more to execute this line and you should be back to the beginning of the for loop on line 38
+So, the next line gdb is going to execute is line 40. 
+Enter once more to execute this line and you should be back to the beginning
+of the for loop on line 38
 
 (gdb) 
 38	    for(int i =0 ; i < numCourses; i++){
 
-Now print the 5 elements of courseGrades using the commands we learned before. Is it what you expected?
+Now print the 5 elements of courseGrades using the commands we learned before. 
+Is it what you expected?
 
 (gdb) p courseGrades[0]@5
 $3 = {4, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
 
-Element at index 0 has been set to 4 which is what we expected. Now let's run the code until we finish executing the for loop.
+Element at index 0 has been set to 4 which is what we expected.
+Now let's run the code until we finish executing the for loop.
 You can do this with until
 
 gdb) until
 63	}
 
-gdb always shows you the next line that will be executed. In this case it is the brace that is at the end of the function. We are still in the function, so you can examine the value of courseGrades again
+gdb always shows you the next line that will be executed. 
+In this case it is the brace that is at the end of the function. 
+We are still in the function, so you can examine the value of courseGrades again
 
 (gdb)p courseGrades[0]@5
 $4 = {4, 0, 4, 5.4322263344105125e-312, 0}
 
-Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. You can now clearly see the consequence of not having courseGrades properly populated.
+Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated,
+courseGrades would have had 4.0 at index 1. You can now clearly see the consequence 
+of not having courseGrades properly populated.
 
 
 
