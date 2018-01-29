@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: "C++ classes continued - constructors, class vs instance (intro to PA1)"
+desc: "C++ classes - converting a procedural implementation to a OOP style program (intro to PA1)"
 ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
@@ -10,25 +10,18 @@ lecture_date: 2018-01-22
 
 
 # Code from lecture:
-[https://github.com/ucsb-cs24-sp17/lectures](https://github.com/ucsb-cs24-sp17/lectures)
+[Code for lecture 02](https://github.com/ucsb-cs24-w18/cs24-w18-lecture-02)
 
 # Topics
 
-
-
 * Intro to lab01 and pa01
 * Implementing classes: class vs instance, syntax for classes, scope, methods, instance variables
-* Default and parameterized constructors
-* Value semantics
-* Put it all together with the thinking_cap ADT
+* We examine the differences and similarities between a procedural implementation and a OOP style program by coding up a game involving rolling a pair of die
+
+* Classes: structs but with methods
+* Accessors and modifiers
+* When to use classes, how many? The dangers of overobjectification (too many classes)
+* ADT (Abstract Data Type) ~ class (w/ info hiding) for use by other programmers
 
 
-About specification, design, implementation
 
-e.g., Specify:
-Decompose problem (design concept)
-	e.g., functions: prepare output
-	Information hiding
-	Pre/Post-conditions
-
-ADT ~ class (w/ info hiding) for use by other programmers
