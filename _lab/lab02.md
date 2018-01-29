@@ -506,8 +506,7 @@ As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you cha
 
 ## Step 6: Show off your work and get credit for this lab
 
-Get your mentor's attention to inspect your work, and to record completion of your lab work.
-Don't leave early though ... begin the after-lab work below.
+Get your mentor's attention to inspect your work.
 
 
 ## Step 7: Submit your code on submit.cs
