@@ -524,9 +524,11 @@ Get your mentor's attention to inspect your work.
 
 You must accomplish the following to earn full credit [50 total points] for this lab:
 
-* [50 points] buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. 
+[50 points]:  
 
-* [20 pts] correct program turned in via submit
+* buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. 
+
+* correct program turned in via submit
 
 
 
