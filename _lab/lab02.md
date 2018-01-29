@@ -205,12 +205,26 @@ This program is supposed to a list of course names and letter grades in order an
 
 
 
-So a non-buggy version of the program with executable name "gpa" would execute like this:
+So a non-buggy version of the program with executable name "gpa" would execute like this, where 16, :
 
 ```
+$ ./gpa CS16 A CS24 A+ CS32 A
+Num courses : 3
+CS16   A
+CS24   A+
+CS32   A
+GPA: 4.000
+```
+
+If an odd number of arguments are passed to the program it should appropriately print a usage message to standard error, as follows:
 
 ```
-But this code has errors. Your job will be to find one of them using gdb. No need to fix it now, just find it. That's the purpose of gdb - it helps you find errors in your code.
+$ ./gpa 16 
+Usage: ./gpa course letterGrade 
+```
+
+
+But this code has errors. Your job will be to find all the errors using gdb. No need to fix it now, just find it. That's the purpose of gdb - it helps you find errors in your code. 
 
 Compile the code, and remember to compile with the -g option. Use this command:
 
@@ -221,41 +235,8 @@ g++ -g -o buggy buggyGPA.cpp
 Then run it. Here is an example run:
 
 ```
-Enter a course name:
-history
-You are registered for the following 1 courses:
-1. history
 
- Do you Want to register for  another course? (y/n)
-y
-Your Answer is:y
-Enter a course name:
-You are registered for the following 2 courses:
-1. history
-2.
-
- Do you Want to register for  another course? (y/n)
-y
-Your Answer is:y
-Enter a course name:
-You are registered for the following 3 courses:
-1. history
-2.
-3.
-
- Do you Want to register for  another course? (y/n)
-y
-Your Answer is:y
-Enter a course name:
-You are registered for the following 4 courses:
-1. history
-2.
-3.
-4.
-
- Do you Want to register for  another course? (y/n)
-
- ```
+```
 
 Hmmm... Well it seems that our program doesn't wait for our input after the first course name ... Let's try to debug it with gdb to see how the basic gdb commands work. Begin by starting gdb with buggy1 as its command line argument:
 
