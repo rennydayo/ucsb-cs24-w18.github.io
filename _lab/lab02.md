@@ -209,7 +209,6 @@ So a non-buggy version of the program with executable name "gpa" would execute l
 
 ```
 $ ./gpa CS16 A CS24 A+ CS32 A
-Num courses : 3
 CS16   A
 CS24   A+
 CS32   A
@@ -235,31 +234,61 @@ g++ -g -o buggy buggyGPA.cpp
 Then run it. Here is an example run:
 
 ```
-
+$ ./buggy CS16 A CS24 A+ CS32 A
+CS16   A
+CS24   A+
+CS32   A
+GPA: 2.667
 ```
 
-Hmmm... Well it seems that our program doesn't wait for our input after the first course name ... Let's try to debug it with gdb to see how the basic gdb commands work. Begin by starting gdb with buggy1 as its command line argument:
+Hmmm... Well it seems that our program doesn't calculate the correct GPA. Let's try to debug it with gdb to see how the basic gdb commands work. Begin by starting gdb with buggy as its command line argument:
 
 ```
-bash-4.3$ gdb buggy1
-Insert a breakpoint at line 19.
+$ gdb ./buggy
+GNU gdb (GDB) Fedora 7.12.1-48.fc25
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./buggy...done.
 
-(gdb) break 19
-Enter "run", and then start the program from the beginning by typing "y" when asked:
+(gdb) break 24
+Type "r" for "run", followed by the command line arguments CS16 A CS24 A+ 
 
-(gdb) run
-The program being debugged has been started already.
-Start it from the beginning? (y or n) y
-This way the program will run until line 19. Write the command "next" or just "n" in order to move one statement forward. Now the program asks for your input:
+(gdb)r CS16 A CS24 A+
+Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+
+This way the program will run until line 24. Normally, you might have put a cout statement right before this line to examine the values of the arrays and any other local variables. With gdb we can do this at the gdb command line without having to edit and recompile our program
 
-Enter a course name:
-20      getline(cin,courseName,'\n');
-Don't give your input at this time. Instead move to the next step by writing again "next" or just by hitting enter (enter repeats the previous command you had typed). After you hit enter the getline function on line 20 is called and waits for your input. So you just have to enter a course name again - "Math" for example.
+Let's print the element 0 of courseNames using the "p" (print) statement
 
-Let's say we would like to know if the courseName variable has the value we assigned to it. Just type:
+(gdb) p courseNames[0]
+$4 = "CS16"
 
-(gdb) print courseName
-$1 = "Math"
+That seems right. Now let's try to print the first five elements of courseNames
+
+(gdb) p courseNames[0]@5
+$7 = {"CS16", "", "CS24", "", ""}
+
+This is definitely weird, "CS24" is at index 2, while it should have been at index 1. 
+Go ahead and print the values of all the local variables in your code using info locals
+
+(gdb) info locals
+courseNames = {"CS16", "", "CS24", "", ""}
+courseGrades = {1.3852388523421298e-309, 5.4322263344105125e-312, 0, 0, 
+  -nan(0xfffffffffffff)}
+courseLetterGrades = {"A", "", "A+", "", ""}
+numCourses = 2
+
+You will probably see a different set of values for courseGrades because it is an uninitialized array. But the other variables should have the same values. We can immediately spot that something went wrong prior to line 24 by looking at the content of courseNames and courseLetterGrades. The program should have resulted in courseNames being {"CS16", "CS24", "", "", ""} and courseLetterGrades being {"A", "A+", "",  "", ""}. Notice how much easier it is to examine the values of your variables at run time without putting additional print statements. Let's continue for now.
 
 ```
 So indeed (on this first iteration at least) variable courseName has the value we entered as an input ("Math"). Now use the next command to move forward up to line 29 ("userAnswer = trackUserAnswer();"). At that point, use the "step" command (or "s") in order to step into and execute the subroutine trackUserAnswer(). When you wish to exit from the trackUserAnswer function you can write finish. (But be aware that this function needs user input. So you should enter finish just after you enter your input.)
