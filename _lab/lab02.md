@@ -128,28 +128,86 @@ Maybe time to switch partner roles?
 
 Inevitably sometime you will need to debug your code. gdb is a very powerful tool. Here we learn just the basics.
 
-Look at buggy1.cpp to know its major parts.
+### GDB Commands Summary
+The following is a list of the most useful commands inside the gdb.
+help
+gdb provides online documentation. Just typing help, you will obtain a list of topics.
+
+**file**
+"file executable" specifies which program you want to debug.
+
+**run**
+"run" starts the program running under gdb. The program is the one that you have previously selected with the file command, or on the unix command line when you started gdb. You can give command line arguments to your program on the gdb command line. You can do this the same way you would on the unix command line, except that you are saying run instead of the program name. For example,
+
+run 5 20 40 60
+
+You can even do input/output redirection: run > outfile.txt.
+
+**list**
+"list linenumber" prints out some lines from the source code around linenumber. If you give it the argument function it will print out lines from the beginning of that function.
+
+Just list without any arguments will print out the lines just after the lines that you printed out with the previous list command.
+
+**break**
+"break" sets a breakpoint in your program.
+
+A `breakpoint` is a spot in your program where you would like to temporarily stop execution in order to check the values of variables, or to try to find out where the program is crashing, etc.
+
+"break function" sets the breakpoint at the beginning of function. If your code is in multiple files, you might need to specify filename:function.
+
+"break linenumber" or "break filename:linenumber" sets the breakpoint to the given line number in the source file. Execution will stop before that line has been executed.
+
+**delete**
+"delete" deletes all breakpoints that you have set. 
+"delete number" deletes breakpoint numbered number. You can find out what number each breakpoint is by doing info breakpoints. (The command info can also be used to find out a lot of other stuff. Do help info for more information.)
+
+**clear**
+"clear function" deletes the breakpoint set at that function. Similarly for linenumber, filename:function, and filename:linenumber.
+
+**step**
+"step" goes ahead and execute the current source line, and then stop execution again before the next source line.
+
+**next**
+"next" continues until the next source line in the current function (actually, the current innermost stack frame, to be precise). This is similar to step, except that if the line about to be executed is a function call, then that function call will be completely executed before execution stops again, whereas with step execution will stop at the first line of the function that is called.
+
+**until**
+"until" is like next, except that if you are at the end of a loop, "until" will continue execution until the loop is exited, whereas "next" will just take you back up to the beginning of the loop. This is convenient if you want to see what happens after the loop, but don't want to step through every iteration.
+
+**print**
+"print expression" prints out the value of the expression, which could be just a variable name. To print out the first 25 (for example) values in an array called list, you would do 
+print list[0]@25
+ 
+
+**quit**
+"quit" is used to exit the gdb debugger.
+
+
+Look at buggyGPA.cpp to know its major parts.
 
 (Emacs Users Hint: If you are using emacs you can see line numbers on the editor by typing M-x linum-mode. This will make your life easier. If you prefer running gdb on e-macs maybe you should try M-x gdb-many-windows in order to split your screen and be able to see variable values, gdb and e-macs all together. You gain control back to emacs by typing: C-x 0)
 
-This program is supposed to ask a student about the courses he/she plans to register. So a non-buggy version of the program would execute like this:
+This program is supposed to a list of course names and letter grades in order and compute a grade point average out of 4.0 based on the following standard mapping:
+
+| Letter  | Point value|
+| --------| -----------|
+| A+      |   4.0  |
+| A       |   4.0  |
+| A-      |   3.7  |
+| B+      |   3.3  |
+| B       |   3.0  |
+| B-      |   2.7  |
+| C+      |   2.3  |
+| C       |   2.0  |
+| C-      |   1.7  |
+| D+      |   1.3  |
+| D       |   1.0  |
+| <D      |   0    |
+
+
+
+So a non-buggy version of the program with executable name "gpa" would execute like this:
 
 ```
-Enter a course name:
-Computer Networks
-You are registered for the following 1 courses:
-1. Computer Networks
-
- Do you want to register for  another course? (y/n)
-y
-Your Answer is:y
-Enter a course name:
-Computer Security
-You are registered for the following 2 courses:
-1. Computer Networks
-2. Computer Security
-
- Do you want to register for  another course? (y/n)
 
 ```
 But this code has errors. Your job will be to find one of them using gdb. No need to fix it now, just find it. That's the purpose of gdb - it helps you find errors in your code.
@@ -157,7 +215,7 @@ But this code has errors. Your job will be to find one of them using gdb. No nee
 Compile the code, and remember to compile with the -g option. Use this command:
 
 ```
-g++ -g -o buggy1 buggy1.cpp
+g++ -g -o buggy buggyGPA.cpp
 ```
 
 Then run it. Here is an example run:
