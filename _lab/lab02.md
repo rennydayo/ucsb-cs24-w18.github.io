@@ -322,7 +322,7 @@ We had set the breakpoint at line 23 which is a function call.
 You can step into the function assignCourseGrade using the "s" (step) command
 (gdb) s
 assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60, 
-    courseGrades=0x7fffffffdf00) at buggyGPA.cpp:38
+    courseGrades=0x7fffffffdf00) at buggyGPA.cpp:37
 37	    for(int i =0 ; i < numCourses; i++){
 
 gdb is showing you the values of all the parameters passed to the 
