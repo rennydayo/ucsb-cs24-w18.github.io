@@ -499,7 +499,8 @@ This caused my program to crash!
 ```
 
 
-Ok... Now you have all the tools you need in order to find where the bugs in this program are. 
+Ok... Now you have all the tools you need in order to find where the bugs in this program are. Your program should be able to handle upto 5 input courses although you may modify it to handle information about an arbitrary number of inputs
+
 
 As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you change the file, you should recompile it and then run.
 
