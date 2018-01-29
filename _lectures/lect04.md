@@ -10,6 +10,8 @@ lecture_date: 2018-01-29
 
 # Code from lecture
 
+[Lecture 04 code on github](https://github.com/ucsb-cs24-w18/cs24-w18-lecture-04)
+
 # Topics
 
 ## Operator overloading
