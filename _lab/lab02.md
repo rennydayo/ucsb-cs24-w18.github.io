@@ -131,8 +131,7 @@ Maybe time to switch partner roles?
 Inevitably sometime you will need to debug your code. gdb is a very powerful tool. Here we learn just the basics.
 
 ### GDB Commands Summary
-The following is a list of the most useful commands inside the gdb.
-help
+The following is a list of the most useful commands inside the gdb - [also available at this link](http://www.cs.uregina.ca/Links/class-info/330/CompileDebug/170_gdb.html).
 gdb provides online documentation. Just typing help, you will obtain a list of topics.
 
 **file**
