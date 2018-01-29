@@ -4,7 +4,7 @@ desc: " Operator overloading, review of references and pointers"
 ready: true
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf
-annotatedready: true
+annotatedready: false
 lecture_date: 2018-01-29
 ---
 
