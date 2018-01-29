@@ -383,6 +383,122 @@ To run your code until the next breakpoint is reached type (c) for continue.
 
 Other stuff: Enter "help" at the gdb prompt to find out about more commands. One useful one, for example, is "list" - try it.
 
+Type q (for quit) and then 'y' to quit gdb
+
+Now run the program with just one argument as follows:
+
+```
+$ ./buggy CS16
+terminate called after throwing an instance of 'std::logic_error'
+  what():  basic_string::_M_construct null not valid
+Aborted (core dumped)
+```
+Your program may or may not crash but if you see the same error message as I have
+then it has clearly crashed! If you are not able to reproduce the crash don't worry, just read on.
+
+Notice that when your program crashes, the error message C++ throws at you doesn't 
+give any clues about which line of code caused it.
+
+Now let's try running the program in gdb
+
+```
+gdb buggy
+GNU gdb (GDB) Fedora 7.12.1-48.fc25
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from buggy...done.
+(gdb) r CS16
+Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.24-10.fc25.x86_64
+terminate called after throwing an instance of 'std::logic_error'
+  what():  basic_string::_M_construct null not valid
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff719e8df in raise () from /lib64/libc.so.6
+
+Looks like an exception was raised somewhere in the C++ library. The std library
+is always correct. We need to find which line of our code caused this 
+behavior.
+
+Use the bt (backtrace) command to trace the sequence of function calls that
+resulted in this state
+
+(gdb) bt
+#0  0x00007ffff719e8df in raise () from /lib64/libc.so.6
+#1  0x00007ffff71a04da in abort () from /lib64/libc.so.6
+#2  0x00007ffff7ae04fd in __gnu_cxx::__verbose_terminate_handler() ()
+   from /lib64/libstdc++.so.6
+#3  0x00007ffff7ade2b6 in ?? () from /lib64/libstdc++.so.6
+#4  0x00007ffff7ade301 in std::terminate() () from /lib64/libstdc++.so.6
+#5  0x00007ffff7ade519 in __cxa_throw () from /lib64/libstdc++.so.6
+#6  0x00007ffff7b080af in std::__throw_logic_error(char const*) ()
+   from /lib64/libstdc++.so.6
+#7  0x00007ffff7b74f84 in void std::__cxx11::basic_string<char, std::char_traits<char>,
+std::allocator<char> >::_M_construct<char const*>(char const*, char const*, 
+std::forward_iterator_tag) () from /lib64/libstdc++.so.6
+#8  0x00007ffff7b7513c in std::__cxx11::basic_string<char, std::char_traits<char>,
+std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) () 
+from /lib64/libstdc++.so.6
+#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:20
+(gdb)
+
+Ah! Looks like the culprit is line 20 of buggyGPA.cpp. That's the line of code
+that resulted in the chain of events leading up to the crash.
+Use the list command to examine the code around line 20 of buggyGPA.cpp
+
+(gdb) l buggyGPA.cpp:20
+15	  double gpa;
+16	  int numCourses = int(argc/2);
+17	
+18	  for (int i = 1; i< argc; i=i+2 ){
+19	    courseNames[i-1] = string(argv[i]);
+20	    courseLetterGrades[i-1] = string(argv[i+1]); // here is the line that caused the crash
+21	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
+22	  }
+
+Line 20 is: courseLetterGrades[i-1] = string(argv[i+1]);
+Without gdb identifying that this exact line of code caused the program to crash would have 
+been reealllly hard!
+
+What's more, with gdb you can go back in time (yes its also a time machine!) 9 function calls ago
+and retrieve the values of your local variables right before line 20 was executed.
+
+Use the up command to go back 9 calls to the moment when line 20 was about to be executed.
+
+(gdb) up 9
+#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:20
+20	    courseLetterGrades[i-1] = string(argv[i+1]);
+
+You can now examine the value of the local variable i
+
+(gdb) p i
+$1 = 1
+
+Look at line 20 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
+bound access (argv only has two elements). You can actually print the value of
+argv[i+1] 
+
+(gdb) p argv[i+1]
+$2 = 0x0
+
+In my case it was null - an invalid parameter to the constructor of string class.
+This caused my program to crash!
+
+
+```
+
+
 Ok... Now you have all the tools you need in order to find where the bugs in this program are. 
 
 As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you change the file, you should recompile it and then run.
