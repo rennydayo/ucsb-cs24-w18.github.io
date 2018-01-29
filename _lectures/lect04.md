@@ -14,7 +14,7 @@ lecture_date: 2018-01-29
 
 # Topics
 
-## Operator overloading
+## Operator overloading - Pages 63 - 80 in the book
 
 We will start with a basic implementation of the point class from Chapter 2. We will then augment the class with binary operator functions. By **overloading** certain operators like ==, we can now write code as shown below:
 
