@@ -11,7 +11,7 @@ lecture_date: 2018-01-24
 
 
 # Code from lecture:
-[Code for lecture 03](https://github.com/ucsb-cs24-w18/cs24-w18-lecture-03)
+[Code on github for lecture 03](https://github.com/ucsb-cs24-w18/cs24-w18-lecture-03)
 
 
 # Topics
