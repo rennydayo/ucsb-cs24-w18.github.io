@@ -23,9 +23,10 @@ if (p1 == p2){
 }
 ```
 We will specifically discuss:
-(1) Overloading binary comparison operators e.g. ==
-(2) Overloading binary arithmetic operators e.g. +
-(3) Overloading output and input operators e.g. >> and <<
+
+1. Overloading binary comparison operators e.g. ==
+2. Overloading binary arithmetic operators e.g. +
+3. Overloading output and input operators e.g. >> and <<
 
 ## Review of pointers and dynamic memory allocation
 * Review of pointers, arrays
