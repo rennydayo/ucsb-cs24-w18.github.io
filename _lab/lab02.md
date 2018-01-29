@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02
-ready: false
+ready: true
 desc: "Using g++, make and gdb"
 assigned: 2018-01-29 09:00:00.00-8
 due: 2018-02-05 23:59:00.00-8
@@ -14,6 +14,8 @@ By the time you have completed this lab, you should be able to
 * Effectively use g++ from the command line
 * Create and use a simple Makefile
 * Use basic gdb commands to debug a program
+
+Please note that this lab was updated on Jan 29 at 12:14 am. If you completed the lab before, note that the gdb exercise has changed. You must redo it.
 
 # Step by Step Instructions
 
