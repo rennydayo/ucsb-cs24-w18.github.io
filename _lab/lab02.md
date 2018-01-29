@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02
-ready: true
+ready: false
 desc: "Using g++, make and gdb"
 assigned: 2018-01-29 09:00:00.00-8
 due: 2018-02-05 23:59:00.00-8
