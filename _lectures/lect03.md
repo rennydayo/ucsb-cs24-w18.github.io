@@ -4,7 +4,7 @@ desc:  "Constructors, Makefiles, intro to gdb (lab02)  "
 ready: true
 pdfurl: /lectures/CS24_Lecture3.pdf
 annotatedpdfurl: /lectures/CS24_Lecture3_ann.pdf
-annotatedready: true
+annotatedready: false
 lecture_date: 2018-01-24
 ---
 
