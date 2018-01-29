@@ -17,10 +17,6 @@ By the time you have completed this lab, you should be able to
 
 # Step by Step Instructions
 
-## Step 0: Fill out a survey for the department
-
-The Computer Science Department's Curriculum Committee wants each student (individually) to fill out and submit the [Undergraduate Curriculum Assessment Survey #1](https://www.surveymonkey.com/r/6FP5L5Z). It should only take a couple of minutes for you to complete. Please do that now, before going on to Step 1.
-
 ## Step 1: Choose initial roles, create a directory and get the starter code for this lab
 
 Partner up (and remember to switch roles after awhile). If your regular partner is more than 5 minutes late, ask the TA to pair you with someone else for this week.
