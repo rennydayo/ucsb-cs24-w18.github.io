@@ -262,12 +262,12 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from ./buggy...done.
 
-(gdb) break 24
+(gdb) break 23
 Type "r" for "run", followed by the command line arguments CS16 A CS24 A+ 
 
 (gdb)r CS16 A CS24 A+ CS32 A
 Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
-This way the program will run until line 24. Normally, you might have put 
+This way the program will run until line 23. Normally, you might have put 
 a cout statement right before this line to examine the values of the arrays 
 and any other local variables. With gdb we can do this at the gdb command 
 line without having to edit and recompile our program
@@ -297,7 +297,7 @@ result = 2.0750045670802343e-317
 You will probably see a different set of values for courseGrades and result 
 because these are uninitialzied. But the other variables should have the
 same values as shown above. We can immediately spot that something went 
-wrong prior to line 24 by looking at the content of courseNames and
+wrong prior to line 23 by looking at the content of courseNames and
 courseLetterGrades. The program should have resulted in courseNames being
 {"CS16", "CS24", "CS32", "", ""} and courseLetterGrades being
 {"A", "A+", "A",  "", ""}. Notice how much easier it is to examine the values
@@ -307,23 +307,23 @@ print statements.
 Let's continue for now. Type "l" for list to see the code you are about to execute.
 
 (gdb) l
-19	    courseNames[i-1] = string(argv[i]);
-20	    courseLetterGrades[i-1] = string(argv[i+1]);
-21	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
-22	  }
-23	
-24	  assignCourseGrade(numCourses, courseLetterGrades, courseGrades );
-25	  
-26	  cout.setf(ios::fixed);
-27	  cout.setf(ios::showpoint);
-28	  cout.precision(3);
+18	    courseNames[i-1] = string(argv[i]);
+19	    courseLetterGrades[i-1] = string(argv[i+1]);
+20	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
+21	  }
+22	
+23	  assignCourseGrade(numCourses, courseLetterGrades, courseGrades );
+24	  
+25	  cout.setf(ios::fixed);
+26	  cout.setf(ios::showpoint);
+27	  cout.precision(3);
 
-We had set the breakpoint at line 24 which is a function call. 
+We had set the breakpoint at line 23 which is a function call. 
 You can step into the function assignCourseGrade using the "s" (step) command
 (gdb) s
 assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60, 
     courseGrades=0x7fffffffdf00) at buggyGPA.cpp:38
-38	    for(int i =0 ; i < numCourses; i++){
+37	    for(int i =0 ; i < numCourses; i++){
 
 gdb is showing you the values of all the parameters passed to the 
 assignCourseGrade function! Print the first 5 elements of courseGrades
@@ -335,20 +335,20 @@ This is the array the function will be modifying.
 Use "n" for next to just execute the next line
 
 (gdb) n
-39	      if(courseLetterGrades[i]=="A" || courseLetterGrades[i]=="A+"){
+38	      if(courseLetterGrades[i]=="A" || courseLetterGrades[i]=="A+"){
 
 You can run the same gdb command as before by pressing enter. 
 In this case if you press enter you gdb will execute the next command.
 
 (gdb) 
-40	        courseGrades[i] = 4.0;
+39	        courseGrades[i] = 4.0;
 
 So, the next line gdb is going to execute is line 40. 
 Enter once more to execute this line and you should be back to the beginning
 of the for loop on line 38
 
 (gdb) 
-38	    for(int i =0 ; i < numCourses; i++){
+37	    for(int i =0 ; i < numCourses; i++){
 
 Now print the 5 elements of courseGrades using the commands we learned before. 
 Is it what you expected?
@@ -361,7 +361,7 @@ Now let's run the code until we finish executing the for loop.
 You can do this with until
 
 gdb) until
-63	}
+62	}
 
 gdb always shows you the next line that will be executed. 
 In this case it is the brace that is at the end of the function. 
@@ -378,7 +378,7 @@ of not having courseGrades properly populated.
 ```
 
 
-More about breakpoints: Write command break to put a breakpoint on line 29. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
+More about breakpoints: Write command break to put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
 
 To run your code until the next breakpoint is reached type (c) for continue.
 
@@ -451,42 +451,42 @@ std::forward_iterator_tag) () from /lib64/libstdc++.so.6
 #8  0x00007ffff7b7513c in std::__cxx11::basic_string<char, std::char_traits<char>,
 std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) () 
 from /lib64/libstdc++.so.6
-#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:20
+#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
 (gdb)
 
-Ah! Looks like the culprit is line 20 of buggyGPA.cpp. That's the line of code
+Ah! Looks like the culprit is line 19 of buggyGPA.cpp. That's the line of code
 that resulted in the chain of events leading up to the crash.
-Use the list command to examine the code around line 20 of buggyGPA.cpp
+Use the list command to examine the code around line 19 of buggyGPA.cpp
 
-(gdb) l buggyGPA.cpp:20
-15	  double gpa;
-16	  int numCourses = int(argc/2);
-17	
-18	  for (int i = 1; i< argc; i=i+2 ){
-19	    courseNames[i-1] = string(argv[i]);
-20	    courseLetterGrades[i-1] = string(argv[i+1]); // here is the line that caused the crash
-21	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
-22	  }
+(gdb) l buggyGPA.cpp:19
 
-Line 20 is: courseLetterGrades[i-1] = string(argv[i+1]);
+15	  int numCourses = int(argc/2);
+16	
+17	  for (int i = 1; i< argc; i=i+2 ){
+18	    courseNames[i-1] = string(argv[i]);
+19	    courseLetterGrades[i-1] = string(argv[i+1]); // here is the line that caused the crash
+20	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
+21	  }
+
+Line 19 is: courseLetterGrades[i-1] = string(argv[i+1]);
 Without gdb identifying that this exact line of code caused the program to crash would have 
 been reealllly hard!
 
 What's more, with gdb you can go back in time (yes its also a time machine!) 9 function calls ago
-and retrieve the values of your local variables right before line 20 was executed.
+and retrieve the values of your local variables right before line 19 was executed.
 
-Use the up command to go back 9 calls to the moment when line 20 was about to be executed.
+Use the up command to go back 9 calls to the moment when line 19 was about to be executed.
 
 (gdb) up 9
-#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:20
-20	    courseLetterGrades[i-1] = string(argv[i+1]);
+#9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
+19	    courseLetterGrades[i-1] = string(argv[i+1]);
 
 You can now examine the value of the local variable i
 
 (gdb) p i
 $1 = 1
 
-Look at line 20 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
+Look at line 19 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
 bound access (argv only has two elements). You can actually print the value of
 argv[i+1] 
 
