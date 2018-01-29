@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: " Operator overloading, linked-lists using structs"
+desc: " Operator overloading, review of references and pointers"
 ready: true
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf
@@ -35,12 +35,7 @@ We will specifically discuss:
 * Passing parameters by value and address
 * Passing arrays to functions
 * Dynamic memory allocation and dynamic arrays
-* Memory leaks and dangling pointers
-* Tools for detecting memory leaks and finding the source of segfaults: valgrind and gdb
 
-## Linked Lists
-* Linked-lists (C style implementation - review from CS 16)
-* Creating a list
-* Iterating through a list
-* Modifying a list (appending elements to the end)
+
+
 
