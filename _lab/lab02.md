@@ -33,7 +33,7 @@ cd ~/cs24/lab02
 Now navigate to your starter-code directory and do a git pull to get the latest version of the code
 
 ```
-cd ~/cs24/starter-code/
+cd ~/cs24/cs24-w18-lab-starter-code/
 git pull
 cd ~/cs24/lab02/
 ```
@@ -41,7 +41,7 @@ cd ~/cs24/lab02/
 Now copy all of the files for this lab from the starter-code directory to your cs24/lab02 directory:
 
 ```
-cp ~/cs24/starter-code/lab02/* ~/cs24/lab02/
+cp ~/cs24/cs24-w18-lab-starter-code/lab02/* ~/cs24/lab02/
 ```
 
 ## Step 2: Review compiling and linking with g++
@@ -312,14 +312,14 @@ Don't leave early though ... begin the after-lab work below.
 * To submit your code type:
 
 ```
-~submit/submit -p 929 buggy1.cpp
+~submit/submit -p 929 buggyGPA.cpp
 ```
 
 ## Evaluation and Grading
 
 You must accomplish the following to earn full credit [50 total points] for this lab:
 
-* [50 points] buggy1.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggy1.cpp, and can demonstrate how to use make. And lastly, you each filled out the survey in Step 0.
+* [50 points] buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. And lastly, you each filled out the survey in Step 0.
 
 * [20 pts] correct program turned in via submit
 
@@ -328,14 +328,3 @@ Deadline for after-lab submission: tonight at 11:59pm.
 * [-0 to -2 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
 
 
-After lab-work is done
-
-## Work on the following after completing the required work
-
-It turns out that buggy1.cpp also has another problem. After inserting more that 5 courses, a segmentation fault (eventually) takes place. It's obvious why, but every bug in your program is a chance to learn more useful commands to improve your programming life! Start gdb again, and enter more than 5 courses until the fault occurs. Then try the gdb command backtrace (or bt) to see the sequence of commands that produce the crash. Use the x command (to examine memory), and list (or l). By the way, what are your options for fixing this bug?
-
-By the way, here is a GDB Quick Reference Card that shows more gdb commands. And there are many online tutorials for gdb - google "gdb tutorial" for instance.
-
-You may work on PA2 if you need more work to do. Or like usual, help other students who might be struggling. Did you know that trying to teach others is the very best way for you to learn something yourself?
-
-This lab was prepared by Michael Costanzo as an adaptation of a lab created for a different class by Stratos Dimopoulos.
