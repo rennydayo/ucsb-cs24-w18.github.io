@@ -374,7 +374,6 @@ courseGrades would have had 4.0 at index 1. You can now clearly see the conseque
 of not having courseGrades properly populated.
 
 
-
 ```
 
 
@@ -384,8 +383,9 @@ To run your code until the next breakpoint is reached type (c) for continue.
 
 Other stuff: Enter "help" at the gdb prompt to find out about more commands. One useful one, for example, is "list" - try it.
 
-Ok... Now you have all the tools you need in order to find where is the input bug in this program. Continue stepping until right after the program attempts to get the second course name from the user. Not what you expected? Exit gdb after you have stepped to the point where the program is not working properly.
+Ok... Now you have all the tools you need in order to find where the bugs in this program are. 
 
+As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you change the file, you should recompile it and then run.
 
 
 ## Step 6: Show off your work and get credit for this lab
@@ -407,12 +407,9 @@ Don't leave early though ... begin the after-lab work below.
 
 You must accomplish the following to earn full credit [50 total points] for this lab:
 
-* [50 points] buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. And lastly, you each filled out the survey in Step 0.
+* [50 points] buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. 
 
 * [20 pts] correct program turned in via submit
 
-Deadline for after-lab submission: tonight at 11:59pm.
-
-* [-0 to -2 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
 
 
